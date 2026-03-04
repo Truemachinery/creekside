@@ -1,0 +1,175 @@
+/* ============================================
+   Bike Rentals Section Styles
+   ============================================ */
+
+.rentals {
+    position: relative;
+    background: var(--color-dark);
+}
+
+.rentals__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+/* Card */
+.rentals__card {
+    position: relative;
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-gray-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    overflow: hidden;
+    transition: border-color var(--duration-base) var(--ease-out-expo);
+}
+
+.rentals__card:hover {
+    border-color: var(--color-orange);
+}
+
+.rentals__card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0;
+    transition: opacity var(--duration-slow) var(--ease-out-expo);
+    pointer-events: none;
+}
+
+.rentals__card:hover .rentals__card-glow {
+    opacity: 0.06;
+}
+
+.rentals__card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+}
+
+.rentals__card-icon {
+    width: 48px;
+    height: 48px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rentals__card-price {
+    text-align: right;
+}
+
+.rentals__card-amount {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    display: block;
+    line-height: 1;
+}
+
+.rentals__card-duration {
+    font-size: var(--text-xs);
+    color: var(--color-gray-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.rentals__card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+}
+
+.rentals__card-desc {
+    font-size: var(--text-sm);
+    color: var(--color-gray-light);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.rentals__card-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.rentals__card-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    border: 1px solid;
+    letter-spacing: 0.02em;
+}
+
+/* Perks */
+.rentals__perks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--color-gray-dark);
+    border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.rentals__perk {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+}
+
+.rentals__perk-icon {
+    color: var(--color-orange);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.rentals__perk-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+}
+
+.rentals__perk-desc {
+    font-size: var(--text-sm);
+    color: var(--color-gray-light);
+    line-height: 1.6;
+}
+
+/* CTA */
+.rentals__cta {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .rentals__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rentals__perks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .rentals__perks {
+        grid-template-columns: 1fr;
+    }
+}

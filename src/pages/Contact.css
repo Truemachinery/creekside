@@ -1,0 +1,110 @@
+/* ============================================
+   Contact Page Styles
+   ============================================ */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.contact-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.contact-form__group label {
+    font-size: var(--text-sm);
+    color: var(--color-gray-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.contact-form__group input,
+.contact-form__group textarea {
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    color: var(--color-white);
+    font-size: var(--text-base);
+    transition: border-color var(--duration-fast) var(--ease-out-expo);
+    outline: none;
+}
+
+.contact-form__group input:focus,
+.contact-form__group textarea:focus {
+    border-color: var(--color-orange);
+}
+
+.contact-form__group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Info Sidebar */
+.contact-info {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-gray-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.contact-info__section {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.contact-info__section:last-child {
+    border-bottom: none;
+}
+
+.contact-info__icon {
+    color: var(--color-orange);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-info__title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+}
+
+.contact-info__section p {
+    color: var(--color-gray-light);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+}
+
+.contact-info__note {
+    color: var(--color-gray) !important;
+    font-style: italic;
+}
+
+/* Map */
+.contact-map {
+    margin-top: var(--space-lg);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

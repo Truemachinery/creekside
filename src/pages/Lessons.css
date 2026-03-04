@@ -1,0 +1,256 @@
+/* ============================================
+   Lessons Page Styles
+   ============================================ */
+
+.lessons-hero__bg {
+    background:
+        radial-gradient(ellipse at 55% 35%, rgba(232, 122, 30, 0.15) 0%, transparent 55%),
+        radial-gradient(ellipse at 40% 70%, rgba(74, 222, 128, 0.08) 0%, transparent 50%),
+        var(--color-charcoal) !important;
+}
+
+/* Programs */
+.lessons-page__programs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.lessons-page__program {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-gray-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--duration-base) var(--ease-out-expo);
+}
+
+.lessons-page__program:hover {
+    border-color: var(--color-orange);
+}
+
+.lessons-page__program-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+    gap: var(--space-sm);
+}
+
+.lessons-page__program-icon {
+    width: 56px;
+    height: 56px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.lessons-page__program-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: flex-end;
+}
+
+.lessons-page__program-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-full);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: 1px solid;
+    white-space: nowrap;
+}
+
+.lessons-page__program-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+}
+
+.lessons-page__program-tagline {
+    font-size: var(--text-sm);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+}
+
+.lessons-page__program-desc {
+    font-size: var(--text-sm);
+    color: var(--color-gray-light);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+/* Includes checklist */
+.lessons-page__program-includes {
+    list-style: none;
+    margin-bottom: var(--space-lg);
+    flex: 1;
+}
+
+.lessons-page__program-includes li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) 0;
+    font-size: var(--text-sm);
+    color: var(--color-gray-light);
+}
+
+/* Footer */
+.lessons-page__program-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-gray-dark);
+    gap: var(--space-md);
+}
+
+.lessons-page__program-price {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    line-height: 1;
+}
+
+.lessons-page__program-per {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-gray-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Why Grid */
+.lessons-page__why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.lessons-page__why-item {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-gray-dark);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--duration-base) var(--ease-out-expo),
+        box-shadow var(--duration-base) var(--ease-out-expo);
+}
+
+.lessons-page__why-item:hover {
+    border-color: var(--color-orange);
+    box-shadow: var(--shadow-glow);
+}
+
+.lessons-page__why-icon {
+    color: var(--color-orange);
+    margin-bottom: var(--space-md);
+}
+
+.lessons-page__why-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-bottom: var(--space-sm);
+}
+
+.lessons-page__why-desc {
+    font-size: var(--text-sm);
+    color: var(--color-gray-light);
+    line-height: 1.7;
+}
+
+/* Testimonials */
+.lessons-page__testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.lessons-page__testimonial {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-gray-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.lessons-page__testimonial-quote {
+    font-size: var(--text-base);
+    color: var(--color-gray-light);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+}
+
+.lessons-page__testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lessons-page__testimonial-author strong {
+    color: var(--color-white);
+    font-size: var(--text-sm);
+}
+
+.lessons-page__testimonial-author span {
+    color: var(--color-orange);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Steps */
+.lessons-page__steps {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.lessons-page__step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.lessons-page__step-num {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    color: var(--color-orange);
+    opacity: 0.5;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.lessons-page__step p {
+    color: var(--color-gray-light);
+    line-height: 1.7;
+    font-size: var(--text-base);
+}
+
+/* CTA */
+.lessons-page__cta-section {
+    background: var(--color-charcoal);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .lessons-page__programs,
+    .lessons-page__why-grid,
+    .lessons-page__testimonials {
+        grid-template-columns: 1fr;
+    }
+}

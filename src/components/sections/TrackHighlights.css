@@ -1,0 +1,33 @@
+/* ============================================
+   Track Highlights Section Styles
+   ============================================ */
+
+.track-highlights {
+    position: relative;
+    background: var(--color-dark);
+}
+
+.track-highlights__glow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse at center,
+            rgba(232, 122, 30, 0.08) 0%,
+            transparent 70%);
+    pointer-events: none;
+}
+
+.track-highlights__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+    .track-highlights__grid {
+        grid-template-columns: 1fr;
+    }
+}
