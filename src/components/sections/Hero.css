@@ -156,8 +156,13 @@
 /* Responsive */
 @media (max-width: 768px) {
     .hero {
-        height: 75vh;
+        height: 100dvh;
+        height: 100vh;
         min-height: 500px;
+    }
+
+    .hero__content {
+        padding-top: 160px;
     }
 
     .hero__bg-image--desktop {
